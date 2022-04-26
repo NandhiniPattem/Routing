@@ -1,0 +1,10 @@
+<h3>This is user component</h3>
+
+<div *ngFor="let user of users">
+    {{user.name}}
+</div>
+
+<input type="text" #userName>
+<button (click)="login(userName.value)">Login</button>
+<hr>
+<router-outlet></router-outlet>

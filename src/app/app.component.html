@@ -1,0 +1,41 @@
+<h1 highlighter> {{ title | uppercase }} </h1>
+
+<input type="text" [(ngModel)]='person.name'>
+From Two Way Binding: {{person.name}}
+<br>
+From Pipe: {{ person | custom }}
+
+{{ person | custom }}
+<br>
+{{300 | kelvin }}
+<div *ngFor='let user of users | async '>
+    {{user.name}}
+</div>
+{{ person | json }}
+<br>
+{{ price | currency }}
+<br>
+{{ price | currency:'rupees: '}}
+<br>
+{{ price | currency:'INR'}}
+<br>
+{{ price | currency:'INR' : false}}
+<br>
+Regular Way
+<br>
+<a href="/"> Home </a>
+<a href="/user"> User </a>
+<a href="/82hfd28"> Random </a>
+<br>
+Angular Way
+<br>
+<a routerLink="/"> Home </a>
+<a routerLink="/user"> User </a>
+<a [routerLink]="['user', userName]"> ABC </a>
+<a routerLink="/user/XYZ"> XYZ </a>
+<a routerLink="/82hfd28"> Random </a>
+<a routerLink="/sub"> SubModule </a>
+<a routerLink="/lazyone"> Lazyone </a>
+<a routerLink="/lazytwo"> Lazytwo </a>
+<router-outlet></router-outlet>
+
